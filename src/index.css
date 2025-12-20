@@ -116,3 +116,12 @@ All colors MUST be HSL.
     @apply bg-background text-foreground;
   }
 }
+
+.logoPhoto img{
+  border-radius: 20px;
+  margin-left: 50%;
+  width: 20rem;
+  height: 100%;
+  transform: translate(-50%, 0);
+
+}

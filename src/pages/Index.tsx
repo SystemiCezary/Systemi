@@ -4,8 +4,18 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
-import { Phone, Mail, MapPin, Shield, Thermometer, Leaf, CheckCircle } from "lucide-react";
+import {
+  Phone,
+  Mail,
+  MapPin,
+  Shield,
+  Thermometer,
+  Leaf,
+  CheckCircle,
+} from "lucide-react";
 import heroImage from "@/assets/hero-roofing.jpg";
+import logo from "@/assets/strona duze logo.png";
+import { title } from "process";
 
 const Index = () => {
   const { toast } = useToast();
@@ -13,7 +23,7 @@ const Index = () => {
     name: "",
     email: "",
     phone: "",
-    message: ""
+    message: "",
   });
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -25,10 +35,12 @@ const Index = () => {
     setFormData({ name: "", email: "", phone: "", message: "" });
   };
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormData(prev => ({
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    setFormData((prev) => ({
       ...prev,
-      [e.target.name]: e.target.value
+      [e.target.name]: e.target.value,
     }));
   };
 
@@ -36,27 +48,34 @@ const Index = () => {
     <div className="min-h-screen bg-background">
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-        <div 
+        <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{ backgroundImage: `url(${heroImage})` }}
         >
           <div className="absolute inset-0 bg-gradient-hero opacity-80"></div>
         </div>
-        
+
         <div className="relative z-10 container mx-auto px-4 text-center text-white">
           <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
-            System-i
+            <div className="logoPhoto">
+            <img src={logo} alt="SYSTEM I – logo" className="h-20 w-auto" />
+
+            </div>
           </h1>
           <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto leading-relaxed">
-            Profesjonalna izolacja dachów i rozwiązania termoizolacyjne
+            Hydroizolacja i termoizolacja przegród w budownictwie.
           </p>
           <p className="text-lg md:text-xl mb-12 text-blue-100">
             Zaufanie • Doświadczenie • Energooszczędność
           </p>
-          <Button 
-            size="lg" 
+          <Button
+            size="lg"
             className="bg-accent hover:bg-accent-light text-accent-foreground shadow-button transition-all duration-300 transform hover:scale-105 px-8 py-4 text-lg"
-            onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+            onClick={() =>
+              document
+                .getElementById("contact")
+                ?.scrollIntoView({ behavior: "smooth" })
+            }
           >
             Skontaktuj się z nami
           </Button>
@@ -70,16 +89,35 @@ const Index = () => {
             <h2 className="text-4xl md:text-5xl font-bold mb-8 text-foreground">
               O nas
             </h2>
-            <p className="text-lg md:text-xl text-muted-foreground leading-relaxed mb-12">
-              Jesteśmy specjalistami w dziedzinie izolacji dachów z wieloletnim doświadczeniem. 
-              Nasza misja to dostarczanie najwyższej jakości rozwiązań termoizolacyjnych, 
-              które zwiększają efektywność energetyczną budynków i zapewniają komfort mieszkańców.
-            </p>
+            <div className="text-lg md:text-xl text-muted-foreground leading-relaxed mb-12 space-y-6">
+              <p>
+                Firma SYSTEM I to Twój niezawodny partner w dziedzinie
+                dekarstwa. Specjalizujemy się w kompleksowym wykonaniu izolacji
+                zarówno podczas wznoszenia nowych budynków, jak i przy
+                remontowaniu już istniejących. Nasze wieloletnie doświadczenie
+                oraz zaangażowanie w proces budowlany gwarantują trwałość,
+                bezpieczeństwo i wysoką jakość wykonania. Dbamy o każdy detal,
+                bo w naszej branży to bardzo ważne. Stosujemy materiały
+                sprawdzonych dostawców technologii.
+              </p>
+              <p>
+                Nasze realizacje charakteryzuje najwyższa jakość prac,
+                uczciwość, terminowość i transparentność. Zawsze uczestniczymy w
+                procesach budowlanych a rozwiązania projektowe są omawiane z
+                projektantami, kierownictwem budowy oraz inspektorami nadzoru.
+                Zawsze staramy się znaleźć najlepsze rozwiązania dopasowane do
+                indywidualnych potrzeb i budżetu. Wykonujemy izolacje dachów
+                budynków mieszkalnych i przemysłowych, tarasów, balkonów a także
+                izolacje patio i fundamentów.
+              </p>
+            </div>
             <div className="grid md:grid-cols-3 gap-8">
               <Card className="bg-card shadow-card border-0 hover:shadow-lg transition-all duration-300">
                 <CardContent className="p-8 text-center">
                   <Shield className="w-12 h-12 text-primary mx-auto mb-4" />
-                  <h3 className="text-xl font-semibold mb-3 text-card-foreground">Zaufanie</h3>
+                  <h3 className="text-xl font-semibold mb-3 text-card-foreground">
+                    Zaufanie
+                  </h3>
                   <p className="text-muted-foreground">
                     Wieloletnie doświadczenie i referencje zadowolonych klientów
                   </p>
@@ -88,7 +126,9 @@ const Index = () => {
               <Card className="bg-card shadow-card border-0 hover:shadow-lg transition-all duration-300">
                 <CardContent className="p-8 text-center">
                   <Thermometer className="w-12 h-12 text-primary mx-auto mb-4" />
-                  <h3 className="text-xl font-semibold mb-3 text-card-foreground">Ekspertyza</h3>
+                  <h3 className="text-xl font-semibold mb-3 text-card-foreground">
+                    Ekspertyza
+                  </h3>
                   <p className="text-muted-foreground">
                     Specjalizacja w nowoczesnych rozwiązaniach termoizolacyjnych
                   </p>
@@ -97,7 +137,9 @@ const Index = () => {
               <Card className="bg-card shadow-card border-0 hover:shadow-lg transition-all duration-300">
                 <CardContent className="p-8 text-center">
                   <Leaf className="w-12 h-12 text-accent mx-auto mb-4" />
-                  <h3 className="text-xl font-semibold mb-3 text-card-foreground">Ekologia</h3>
+                  <h3 className="text-xl font-semibold mb-3 text-card-foreground">
+                    Ekologia
+                  </h3>
                   <p className="text-muted-foreground">
                     Rozwiązania przyjazne środowisku i energooszczędne
                   </p>
@@ -109,7 +151,7 @@ const Index = () => {
       </section>
 
       {/* Services Section */}
-      <section className="py-24 bg-background">
+      <section className="py-24 bg-background bg-gradient-section">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-8 text-foreground">
@@ -119,35 +161,44 @@ const Index = () => {
               Oferujemy kompleksowe rozwiązania w zakresie izolacji dachów
             </p>
           </div>
-          
+
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {[
               {
                 title: "Izolacja dachów",
-                description: "Profesjonalna izolacja dachów skośnych i płaskich z wykorzystaniem najnowszych materiałów"
+                description:
+                  "Profesjonalna izolacja dachów skośnych i płaskich z wykorzystaniem najnowszych materiałów",
               },
               {
                 title: "Ochrona termiczna",
-                description: "Kompleksowe systemy ochrony termicznej budynków zwiększające efektywność energetyczną"
-              },
-              {
-                title: "Rozwiązania energooszczędne",
-                description: "Nowoczesne technologie zmniejszające zużycie energii i koszty ogrzewania"
+                description:
+                  "Kompleksowe systemy ochrony termicznej budynków zwiększające efektywność energetyczną",
               },
               {
                 title: "Doradztwo techniczne",
-                description: "Profesjonalne doradztwo w wyborze optymalnych rozwiązań izolacyjnych"
+                description:
+                  "Profesjonalne doradztwo w wyborze optymalnych rozwiązań izolacyjnych",
               },
               {
-                title: "Kontrola jakości",
-                description: "Szczegółowa kontrola jakości wykonanych prac i długoterminowa gwarancja"
+                title: "Ekspertyza",
+                description:
+                  "Badania szczelności dachów: pomiar oporu elektrycznego, próby wodne i inne",
               },
               {
-                title: "Serwis posprzedażny",
-                description: "Kompleksowy serwis i wsparcie techniczne po zakończeniu realizacji"
-              }
+                title: "Naprawa",
+                description:
+                "Precyzyjne lokalizowanie nieszczelności na dachach płaskich i obiektach przemysłowych"
+              },
+              {
+                title: "Serwis posprzedażowy",
+                description:
+                  "Kompleksowy serwis i wsparcie techniczne po zakończeniu realizacji",
+              },
             ].map((service, index) => (
-              <Card key={index} className="bg-card shadow-card border-0 hover:shadow-lg transition-all duration-300 group">
+              <Card
+                key={index}
+                className="bg-card shadow-card border-0 hover:shadow-lg transition-all duration-300 group"
+              >
                 <CardContent className="p-6">
                   <div className="flex items-start space-x-4">
                     <CheckCircle className="w-6 h-6 text-accent mt-1 group-hover:scale-110 transition-transform duration-300" />
@@ -167,6 +218,82 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Partners Section */}
+      <section className="py-24 bg-gradient-section">
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">
+                Partnerzy i współpraca
+              </h2>
+              <p className="text-lg md:text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
+                Pracujemy na technologiach sprawdzonych producentów i
+                współpracujemy z firmami wykonawczymi przy realizacjach
+                mieszkaniowych i przemysłowych.
+              </p>
+            </div>
+
+            <div className="grid lg:grid-cols-2 gap-8">
+              <Card className="bg-card shadow-card border-0">
+                <CardContent className="p-8">
+                  <h3 className="text-2xl font-semibold mb-4 text-card-foreground">
+                    Partnerzy handlowi / dostawcy technologii
+                  </h3>
+                  <div className="flex flex-wrap gap-2">
+                    {[
+                      "Bauder",
+                      "Protan",
+                      "Soprema",
+                      "Rockwool",
+                      "Styropmin",
+                      "Austrotherm",
+                      "Synthos",
+                      "Ejot",
+                      "Etanco",
+                    ].map((name) => (
+                      <span
+                        key={name}
+                        className="px-3 py-1 rounded-full text-sm bg-background border border-input text-foreground"
+                      >
+                        {name}
+                      </span>
+                    ))}
+                  </div>
+                </CardContent>
+              </Card>
+
+              <Card className="bg-card shadow-card border-0">
+                <CardContent className="p-8">
+                  <h3 className="text-2xl font-semibold mb-4 text-card-foreground">
+                    Firmy, z którymi współpracujemy
+                  </h3>
+                  <div className="flex flex-wrap gap-2">
+                    {[
+                      "Ferrero",
+                      "Mostostal Warszawa",
+                      "Warbud",
+                      "Budimex",
+                      "Instalnika",
+                    ].map((name) => (
+                      <span
+                        key={name}
+                        className="px-3 py-1 rounded-full text-sm bg-background border border-input text-foreground"
+                      >
+                        {name}
+                      </span>
+                    ))}
+                  </div>
+                  <p className="text-muted-foreground text-sm mt-4 leading-relaxed">
+                    Lista obejmuje wybrane podmioty; przedstawiamy ją w celach
+                    informacyjnych.
+                  </p>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Contact Section */}
       <section id="contact" className="py-24 bg-gradient-section">
         <div className="container mx-auto px-4">
@@ -175,9 +302,7 @@ const Index = () => {
               <h2 className="text-4xl md:text-5xl font-bold mb-8 text-foreground">
                 Kontakt
               </h2>
-              <p className="text-lg md:text-xl text-muted-foreground">
-                Skontaktuj się z nami i otrzymaj bezpłatną wycenę
-              </p>
+              <p className="text-lg md:text-xl text-muted-foreground"></p>
             </div>
 
             <div className="grid lg:grid-cols-2 gap-12">
@@ -192,16 +317,27 @@ const Index = () => {
                       <div className="flex items-start space-x-4">
                         <MapPin className="w-6 h-6 text-primary mt-1" />
                         <div>
-                          <p className="font-medium text-card-foreground">Adres</p>
-                          <p className="text-muted-foreground">01-684 Warszawa</p>
-                          <p className="text-muted-foreground">ul. Klaudyny 18/200</p>
+                          <p className="font-medium text-card-foreground">
+                            Adres
+                          </p>
+                          <p className="text-muted-foreground">
+                            01-991 Warszawa
+                          </p>
+                          <p className="text-muted-foreground">
+                            ul. Heroldów 21E lok. 38
+                          </p>
                         </div>
                       </div>
                       <div className="flex items-start space-x-4">
                         <Phone className="w-6 h-6 text-primary mt-1" />
                         <div>
-                          <p className="font-medium text-card-foreground">Telefon</p>
-                          <a href="tel:+48603966676" className="text-primary hover:text-primary-light transition-colors">
+                          <p className="font-medium text-card-foreground">
+                            Telefon
+                          </p>
+                          <a
+                            href="tel:+48603966676"
+                            className="text-primary hover:text-primary-light transition-colors"
+                          >
                             +48 603 966 676
                           </a>
                         </div>
@@ -209,11 +345,19 @@ const Index = () => {
                       <div className="flex items-start space-x-4">
                         <Mail className="w-6 h-6 text-primary mt-1" />
                         <div>
-                          <p className="font-medium text-card-foreground">Email</p>
-                          <a href="mailto:biuro@system-i.pl" className="text-primary hover:text-primary-light transition-colors block">
+                          <p className="font-medium text-card-foreground">
+                            Email
+                          </p>
+                          <a
+                            href="mailto:biuro@system-i.pl"
+                            className="text-primary hover:text-primary-light transition-colors block"
+                          >
                             biuro@system-i.pl
                           </a>
-                          <a href="mailto:czarek.stepniak@system-i.pl" className="text-primary hover:text-primary-light transition-colors block">
+                          <a
+                            href="mailto:czarek.stepniak@system-i.pl"
+                            className="text-primary hover:text-primary-light transition-colors block"
+                          >
                             czarek.stepniak@system-i.pl
                           </a>
                         </div>
@@ -222,11 +366,13 @@ const Index = () => {
                   </CardContent>
                 </Card>
 
-                {/* Google Map */}
-                <Card className="bg-card shadow-card border-0">
-                  <CardContent className="p-0">
-                    <iframe
-                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2441.8155634567985!2d21.09547397654321!3d52.286755771969!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471ecc8c9f8c8c8f%3A0x8c8c8c8c8c8c8c8c!2sKlaudyny%2018%2C%2001-684%20Warszawa!5e0!3m2!1spl!2spl!4v1234567890123!5m2!1spl!2spl"
+              </div>
+
+              {/* Contact Form */}
+              <Card className="bg-card shadow-card border-0">
+                <CardContent className="p-8">
+                  <iframe
+                      src="https://www.google.com/maps?q=01-991%20Warszawa%20ul.%20Herold%C3%B3w%2021E%20lok.%2038&output=embed"
                       width="100%"
                       height="300"
                       style={{ border: 0 }}
@@ -235,68 +381,6 @@ const Index = () => {
                       referrerPolicy="no-referrer-when-downgrade"
                       className="rounded-lg"
                     ></iframe>
-                  </CardContent>
-                </Card>
-              </div>
-
-              {/* Contact Form */}
-              <Card className="bg-card shadow-card border-0">
-                <CardContent className="p-8">
-                  <h3 className="text-2xl font-semibold mb-6 text-card-foreground">
-                    Formularz kontaktowy
-                  </h3>
-                  <form onSubmit={handleSubmit} className="space-y-6">
-                    <div>
-                      <Input
-                        type="text"
-                        name="name"
-                        placeholder="Imię i nazwisko *"
-                        value={formData.name}
-                        onChange={handleChange}
-                        required
-                        className="border-input bg-background"
-                      />
-                    </div>
-                    <div>
-                      <Input
-                        type="email"
-                        name="email"
-                        placeholder="Adres email *"
-                        value={formData.email}
-                        onChange={handleChange}
-                        required
-                        className="border-input bg-background"
-                      />
-                    </div>
-                    <div>
-                      <Input
-                        type="tel"
-                        name="phone"
-                        placeholder="Numer telefonu"
-                        value={formData.phone}
-                        onChange={handleChange}
-                        className="border-input bg-background"
-                      />
-                    </div>
-                    <div>
-                      <Textarea
-                        name="message"
-                        placeholder="Wiadomość *"
-                        value={formData.message}
-                        onChange={handleChange}
-                        required
-                        rows={5}
-                        className="border-input bg-background resize-none"
-                      />
-                    </div>
-                    <Button 
-                      type="submit" 
-                      className="w-full bg-primary hover:bg-primary-light text-primary-foreground shadow-button transition-all duration-300"
-                      size="lg"
-                    >
-                      Wyślij wiadomość
-                    </Button>
-                  </form>
                 </CardContent>
               </Card>
             </div>
@@ -309,15 +393,15 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div>
-              <h3 className="text-2xl font-bold mb-4">System-i</h3>
+              <h3 className="text-2xl font-bold mb-4">System I</h3>
               <p className="text-blue-100 mb-4">
-                Profesjonalna izolacja dachów i rozwiązania termoizolacyjne
+                Hydroizolacja i termoizolacja przegród w budownictwie.
               </p>
             </div>
             <div>
               <h4 className="text-lg font-semibold mb-4">Kontakt</h4>
               <div className="space-y-2 text-blue-100">
-                <p>01-684 Warszawa, ul. Klaudyny 18/200</p>
+                <p>01-991 Warszawa, ul. Heroldów 21E lok. 38</p>
                 <p>Tel: +48 603 966 676</p>
                 <p>Email: biuro@system-i.pl</p>
               </div>
@@ -331,7 +415,7 @@ const Index = () => {
             </div>
           </div>
           <div className="border-t border-blue-400 mt-8 pt-8 text-center text-blue-100">
-            <p>&copy; 2024 System-i. Wszystkie prawa zastrzeżone.</p>
+            <p>SYSTEM I</p>
           </div>
         </div>
       </footer>
