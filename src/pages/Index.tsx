@@ -58,8 +58,7 @@ const Index = () => {
         <div className="relative z-10 container mx-auto px-4 text-center text-white">
           <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
             <div className="logoPhoto">
-            <img src={logo} alt="SYSTEM I – logo" className="h-20 w-auto" />
-
+              <img src={logo} alt="SYSTEM I – logo" className="h-20 w-auto" />
             </div>
           </h1>
           <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto leading-relaxed">
@@ -70,7 +69,7 @@ const Index = () => {
           </p>
           <Button
             size="lg"
-            className="bg-accent hover:bg-accent-light text-accent-foreground shadow-button transition-all duration-300 transform hover:scale-105 px-8 py-4 text-lg"
+            className="  hover:bg-accent-light text-accent-foreground shadow-button transition-all duration-300 transform hover:scale-105 px-8 py-4 text-lg"
             onClick={() =>
               document
                 .getElementById("contact")
@@ -89,7 +88,7 @@ const Index = () => {
             <h2 className="text-4xl md:text-5xl font-bold mb-8 text-foreground">
               O nas
             </h2>
-            <div className="text-lg md:text-xl text-muted-foreground leading-relaxed mb-12 space-y-6">
+            <div className="justify-text text-lg md:text-xl text-muted-foreground leading-relaxed mb-12 space-y-6">
               <p>
                 Firma SYSTEM I to Twój niezawodny partner w dziedzinie
                 dekarstwa. Specjalizujemy się w kompleksowym wykonaniu izolacji
@@ -155,65 +154,20 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-8 text-foreground">
-              Nasze usługi
+              Ekspertyza oraz naprawa
             </h2>
-            <p className="text-lg md:text-xl text-muted-foreground">
-              Oferujemy kompleksowe rozwiązania w zakresie izolacji dachów
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {[
-              {
-                title: "Izolacja dachów",
-                description:
-                  "Profesjonalna izolacja dachów skośnych i płaskich z wykorzystaniem najnowszych materiałów",
-              },
-              {
-                title: "Ochrona termiczna",
-                description:
-                  "Kompleksowe systemy ochrony termicznej budynków zwiększające efektywność energetyczną",
-              },
-              {
-                title: "Doradztwo techniczne",
-                description:
-                  "Profesjonalne doradztwo w wyborze optymalnych rozwiązań izolacyjnych",
-              },
-              {
-                title: "Ekspertyza",
-                description:
-                  "Badania szczelności dachów: pomiar oporu elektrycznego, próby wodne i inne",
-              },
-              {
-                title: "Naprawa",
-                description:
-                "Precyzyjne lokalizowanie nieszczelności na dachach płaskich i obiektach przemysłowych"
-              },
-              {
-                title: "Serwis posprzedażowy",
-                description:
-                  "Kompleksowy serwis i wsparcie techniczne po zakończeniu realizacji",
-              },
-            ].map((service, index) => (
-              <Card
-                key={index}
-                className="bg-card shadow-card border-0 hover:shadow-lg transition-all duration-300 group"
-              >
-                <CardContent className="p-6">
-                  <div className="flex items-start space-x-4">
-                    <CheckCircle className="w-6 h-6 text-accent mt-1 group-hover:scale-110 transition-transform duration-300" />
-                    <div>
-                      <h3 className="text-lg font-semibold mb-2 text-card-foreground group-hover:text-primary transition-colors duration-300">
-                        {service.title}
-                      </h3>
-                      <p className="text-muted-foreground text-sm leading-relaxed">
-                        {service.description}
-                      </p>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
+            <div className="justify-text shadow-card card-look">
+              <p className="text-lg md:text-xl text-muted-foreground">
+                Bazując na doświadczeniu, wykonujemy badania szczelności dachów
+                opartych na pomiarze oporu elektrycznego, prób wodnych i innych.
+              </p>
+              <p className="text-lg md:text-xl text-muted-foreground">
+                Nasze prace pozwalają na precyzyjne wykrycie nieszczelności na
+                dachach płaskich i dachach budynków przemysłowych, co pozwala na
+                uniknięcie kosztownych napraw powstałych zniszczeń wewnątrz
+                budynków.
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -365,22 +319,21 @@ const Index = () => {
                     </div>
                   </CardContent>
                 </Card>
-
               </div>
 
               {/* Contact Form */}
               <Card className="bg-card shadow-card border-0">
                 <CardContent className="p-8">
                   <iframe
-                      src="https://www.google.com/maps?q=01-991%20Warszawa%20ul.%20Herold%C3%B3w%2021E%20lok.%2038&output=embed"
-                      width="100%"
-                      height="300"
-                      style={{ border: 0 }}
-                      allowFullScreen
-                      loading="lazy"
-                      referrerPolicy="no-referrer-when-downgrade"
-                      className="rounded-lg"
-                    ></iframe>
+                    src="https://www.google.com/maps?q=01-991%20Warszawa%20ul.%20Herold%C3%B3w%2021E%20lok.%2038&output=embed"
+                    width="100%"
+                    height="300"
+                    style={{ border: 0 }}
+                    allowFullScreen
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                    className="rounded-lg"
+                  ></iframe>
                 </CardContent>
               </Card>
             </div>

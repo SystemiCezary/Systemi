@@ -125,3 +125,14 @@ All colors MUST be HSL.
   transform: translate(-50%, 0);
 
 }
+
+.justify-text{
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+.card-look{
+  padding: 32px;
+  border-radius: 20px;
+  margin-top: 70px;
+}
