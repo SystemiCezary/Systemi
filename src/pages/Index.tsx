@@ -90,7 +90,7 @@ const Index = () => {
             </h2>
             <div className="justify-text text-lg md:text-xl text-muted-foreground leading-relaxed mb-12 space-y-6">
               <p>
-                Firma SYSTEM I to Twój niezawodny partner w dziedzinie
+                Firma <b style={{color: "hsl(var(--primary-light))"}}>SYSTEM I</b> to Twój niezawodny partner w dziedzinie
                 dekarstwa. Specjalizujemy się w kompleksowym wykonaniu izolacji
                 zarówno podczas wznoszenia nowych budynków, jak i przy
                 remontowaniu już istniejących. Nasze wieloletnie doświadczenie
@@ -306,13 +306,13 @@ const Index = () => {
                             href="mailto:biuro@system-i.pl"
                             className="text-primary hover:text-primary-light transition-colors block"
                           >
-                            biuro@system-i.pl
+                            system.i@wp.pl
                           </a>
                           <a
                             href="mailto:czarek.stepniak@system-i.pl"
                             className="text-primary hover:text-primary-light transition-colors block"
                           >
-                            czarek.stepniak@system-i.pl
+                            biuro@system-i.pl
                           </a>
                         </div>
                       </div>
@@ -356,7 +356,7 @@ const Index = () => {
               <div className="space-y-2 text-blue-100">
                 <p>01-991 Warszawa, ul. Heroldów 21E lok. 38</p>
                 <p>Tel: +48 603 966 676</p>
-                <p>Email: biuro@system-i.pl</p>
+                <p>Email: system.i@wp.pl</p>
               </div>
             </div>
             <div>
