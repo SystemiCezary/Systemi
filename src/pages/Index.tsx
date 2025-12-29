@@ -158,14 +158,11 @@ const Index = () => {
             </h2>
             <div className="justify-text shadow-card card-look">
               <p className="text-lg md:text-xl text-muted-foreground">
-                Bazując na doświadczeniu, wykonujemy badania szczelności dachów
-                opartych na pomiarze oporu elektrycznego, prób wodnych i innych.
+                Bazując na bogatym doświadczeniu skutecznie usuwamy przecieki i nieszczelności,
+                 poprzez wykonywanie badań szczelności dachów metodą impedancji elektrycznej, metodą elektrooporową, przy pomocy prób dymowych, prób wodnych i innych.
               </p>
               <p className="text-lg md:text-xl text-muted-foreground">
-                Nasze prace pozwalają na precyzyjne wykrycie nieszczelności na
-                dachach płaskich i dachach budynków przemysłowych, co pozwala na
-                uniknięcie kosztownych napraw powstałych zniszczeń wewnątrz
-                budynków.
+                Nasze prace dotyczące wykrywania nieszczelności na dachach, pozwalają na uniknięcie kosztownych napraw uszkodzeń zniszczonych wewnątrz budynków.
               </p>
             </div>
           </div>
@@ -181,17 +178,14 @@ const Index = () => {
                 Partnerzy i współpraca
               </h2>
               <p className="text-lg md:text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
-                Pracujemy na technologiach sprawdzonych producentów i
-                współpracujemy z firmami wykonawczymi przy realizacjach
-                mieszkaniowych i przemysłowych.
+                Działamy na technologiach sprawdzonych producentów i współpracujemy z firmami wykonawczymi przy realizacji inwestycji budowlanych, zarówno mieszkaniowych jak i przemysłowych.
               </p>
             </div>
-
             <div className="grid lg:grid-cols-2 gap-8">
               <Card className="bg-card shadow-card border-0">
                 <CardContent className="p-8">
                   <h3 className="text-2xl font-semibold mb-4 text-card-foreground">
-                    Partnerzy handlowi / dostawcy technologii
+                    Partnerzy handlowi i dostawcy technologii
                   </h3>
                   <div className="flex flex-wrap gap-2">
                     {[
@@ -204,6 +198,7 @@ const Index = () => {
                       "Synthos",
                       "Ejot",
                       "Etanco",
+                      "Swisspor",
                     ].map((name) => (
                       <span
                         key={name}
@@ -223,11 +218,17 @@ const Index = () => {
                   </h3>
                   <div className="flex flex-wrap gap-2">
                     {[
-                      "Ferrero",
-                      "Mostostal Warszawa",
-                      "Warbud",
-                      "Budimex",
-                      "Instalnika",
+                      "Ferrero Polska Sp. z o.o.",
+                      "Mostostal Warszawa SA",
+                      "Warbud SA",
+                      "Budimex SA",
+                      "Instalnika Sp. z o.o.",
+                      "Teatr Wielki - Opera Narodowa",
+                      "WB Electronics SA",
+                      "Eiffage Polska",
+                      "Budownictwo SA",
+                      "Strabag Sp. z o.o.",
+                      "Adamietz Sp. z o.o.",
                     ].map((name) => (
                       <span
                         key={name}
